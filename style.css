@@ -1,0 +1,586 @@
+.squares, .face, .rubik, .scene {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scene {
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  outline: 0;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.scene {
+  background-color: #000000;
+  perspective: 800px;
+  overflow: hidden;
+}
+
+.rubik {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateXYZ 12s infinite linear;
+}
+.rubik .squares::before, .rubik .squares::after {
+  width: 35px;
+  height: 35px;
+}
+.rubik .face:nth-child(1) .squares::before {
+  background-color: #f7f7f7;
+}
+.rubik .face:nth-child(1) .squares::after {
+  background-color: #ff3434;
+}
+.rubik .face:nth-child(1) .squares:nth-child(1)::before, .rubik .face:nth-child(1) .squares:nth-child(1)::after {
+  left: -97.5px;
+  top: -97.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(2)::before, .rubik .face:nth-child(1) .squares:nth-child(2)::after {
+  left: -57.5px;
+  top: -97.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(3)::before, .rubik .face:nth-child(1) .squares:nth-child(3)::after {
+  left: -17.5px;
+  top: -97.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(4)::before, .rubik .face:nth-child(1) .squares:nth-child(4)::after {
+  left: 22.5px;
+  top: -97.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(5)::before, .rubik .face:nth-child(1) .squares:nth-child(5)::after {
+  left: 62.5px;
+  top: -97.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(6)::before, .rubik .face:nth-child(1) .squares:nth-child(6)::after {
+  left: -97.5px;
+  top: -57.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(7)::before, .rubik .face:nth-child(1) .squares:nth-child(7)::after {
+  left: -57.5px;
+  top: -57.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(8)::before, .rubik .face:nth-child(1) .squares:nth-child(8)::after {
+  left: -17.5px;
+  top: -57.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(9)::before, .rubik .face:nth-child(1) .squares:nth-child(9)::after {
+  left: 22.5px;
+  top: -57.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(10)::before, .rubik .face:nth-child(1) .squares:nth-child(10)::after {
+  left: 62.5px;
+  top: -57.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(11)::before, .rubik .face:nth-child(1) .squares:nth-child(11)::after {
+  left: -97.5px;
+  top: -17.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(12)::before, .rubik .face:nth-child(1) .squares:nth-child(12)::after {
+  left: -57.5px;
+  top: -17.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(13)::before, .rubik .face:nth-child(1) .squares:nth-child(13)::after {
+  left: -17.5px;
+  top: -17.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(14)::before, .rubik .face:nth-child(1) .squares:nth-child(14)::after {
+  left: 22.5px;
+  top: -17.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(15)::before, .rubik .face:nth-child(1) .squares:nth-child(15)::after {
+  left: 62.5px;
+  top: -17.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(16)::before, .rubik .face:nth-child(1) .squares:nth-child(16)::after {
+  left: -97.5px;
+  top: 22.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(17)::before, .rubik .face:nth-child(1) .squares:nth-child(17)::after {
+  left: -57.5px;
+  top: 22.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(18)::before, .rubik .face:nth-child(1) .squares:nth-child(18)::after {
+  left: -17.5px;
+  top: 22.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(19)::before, .rubik .face:nth-child(1) .squares:nth-child(19)::after {
+  left: 22.5px;
+  top: 22.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(20)::before, .rubik .face:nth-child(1) .squares:nth-child(20)::after {
+  left: 62.5px;
+  top: 22.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(21)::before, .rubik .face:nth-child(1) .squares:nth-child(21)::after {
+  left: -97.5px;
+  top: 62.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(22)::before, .rubik .face:nth-child(1) .squares:nth-child(22)::after {
+  left: -57.5px;
+  top: 62.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(23)::before, .rubik .face:nth-child(1) .squares:nth-child(23)::after {
+  left: -17.5px;
+  top: 62.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(24)::before, .rubik .face:nth-child(1) .squares:nth-child(24)::after {
+  left: 22.5px;
+  top: 62.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(25)::before, .rubik .face:nth-child(1) .squares:nth-child(25)::after {
+  left: 62.5px;
+  top: 62.5px;
+}
+.rubik .face:nth-child(1) .squares:nth-child(26)::before, .rubik .face:nth-child(1) .squares:nth-child(26)::after {
+  left: -97.5px;
+  top: 102.5px;
+}
+.rubik .face:nth-child(2) .squares::before {
+  background-color: #00bd56;
+}
+.rubik .face:nth-child(2) .squares::after {
+  background-color: #207dff;
+}
+.rubik .face:nth-child(2) .squares:nth-child(1)::before, .rubik .face:nth-child(2) .squares:nth-child(1)::after {
+  left: -97.5px;
+  top: -97.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(2)::before, .rubik .face:nth-child(2) .squares:nth-child(2)::after {
+  left: -57.5px;
+  top: -97.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(3)::before, .rubik .face:nth-child(2) .squares:nth-child(3)::after {
+  left: -17.5px;
+  top: -97.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(4)::before, .rubik .face:nth-child(2) .squares:nth-child(4)::after {
+  left: 22.5px;
+  top: -97.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(5)::before, .rubik .face:nth-child(2) .squares:nth-child(5)::after {
+  left: 62.5px;
+  top: -97.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(6)::before, .rubik .face:nth-child(2) .squares:nth-child(6)::after {
+  left: -97.5px;
+  top: -57.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(7)::before, .rubik .face:nth-child(2) .squares:nth-child(7)::after {
+  left: -57.5px;
+  top: -57.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(8)::before, .rubik .face:nth-child(2) .squares:nth-child(8)::after {
+  left: -17.5px;
+  top: -57.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(9)::before, .rubik .face:nth-child(2) .squares:nth-child(9)::after {
+  left: 22.5px;
+  top: -57.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(10)::before, .rubik .face:nth-child(2) .squares:nth-child(10)::after {
+  left: 62.5px;
+  top: -57.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(11)::before, .rubik .face:nth-child(2) .squares:nth-child(11)::after {
+  left: -97.5px;
+  top: -17.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(12)::before, .rubik .face:nth-child(2) .squares:nth-child(12)::after {
+  left: -57.5px;
+  top: -17.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(13)::before, .rubik .face:nth-child(2) .squares:nth-child(13)::after {
+  left: -17.5px;
+  top: -17.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(14)::before, .rubik .face:nth-child(2) .squares:nth-child(14)::after {
+  left: 22.5px;
+  top: -17.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(15)::before, .rubik .face:nth-child(2) .squares:nth-child(15)::after {
+  left: 62.5px;
+  top: -17.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(16)::before, .rubik .face:nth-child(2) .squares:nth-child(16)::after {
+  left: -97.5px;
+  top: 22.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(17)::before, .rubik .face:nth-child(2) .squares:nth-child(17)::after {
+  left: -57.5px;
+  top: 22.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(18)::before, .rubik .face:nth-child(2) .squares:nth-child(18)::after {
+  left: -17.5px;
+  top: 22.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(19)::before, .rubik .face:nth-child(2) .squares:nth-child(19)::after {
+  left: 22.5px;
+  top: 22.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(20)::before, .rubik .face:nth-child(2) .squares:nth-child(20)::after {
+  left: 62.5px;
+  top: 22.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(21)::before, .rubik .face:nth-child(2) .squares:nth-child(21)::after {
+  left: -97.5px;
+  top: 62.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(22)::before, .rubik .face:nth-child(2) .squares:nth-child(22)::after {
+  left: -57.5px;
+  top: 62.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(23)::before, .rubik .face:nth-child(2) .squares:nth-child(23)::after {
+  left: -17.5px;
+  top: 62.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(24)::before, .rubik .face:nth-child(2) .squares:nth-child(24)::after {
+  left: 22.5px;
+  top: 62.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(25)::before, .rubik .face:nth-child(2) .squares:nth-child(25)::after {
+  left: 62.5px;
+  top: 62.5px;
+}
+.rubik .face:nth-child(2) .squares:nth-child(26)::before, .rubik .face:nth-child(2) .squares:nth-child(26)::after {
+  left: -97.5px;
+  top: 102.5px;
+}
+.rubik .face:nth-child(3) .squares::before {
+  background-color: #f7de1c;
+}
+.rubik .face:nth-child(3) .squares::after {
+  background-color: #f69314;
+}
+.rubik .face:nth-child(3) .squares:nth-child(1)::before, .rubik .face:nth-child(3) .squares:nth-child(1)::after {
+  left: -97.5px;
+  top: -97.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(2)::before, .rubik .face:nth-child(3) .squares:nth-child(2)::after {
+  left: -57.5px;
+  top: -97.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(3)::before, .rubik .face:nth-child(3) .squares:nth-child(3)::after {
+  left: -17.5px;
+  top: -97.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(4)::before, .rubik .face:nth-child(3) .squares:nth-child(4)::after {
+  left: 22.5px;
+  top: -97.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(5)::before, .rubik .face:nth-child(3) .squares:nth-child(5)::after {
+  left: 62.5px;
+  top: -97.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(6)::before, .rubik .face:nth-child(3) .squares:nth-child(6)::after {
+  left: -97.5px;
+  top: -57.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(7)::before, .rubik .face:nth-child(3) .squares:nth-child(7)::after {
+  left: -57.5px;
+  top: -57.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(8)::before, .rubik .face:nth-child(3) .squares:nth-child(8)::after {
+  left: -17.5px;
+  top: -57.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(9)::before, .rubik .face:nth-child(3) .squares:nth-child(9)::after {
+  left: 22.5px;
+  top: -57.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(10)::before, .rubik .face:nth-child(3) .squares:nth-child(10)::after {
+  left: 62.5px;
+  top: -57.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(11)::before, .rubik .face:nth-child(3) .squares:nth-child(11)::after {
+  left: -97.5px;
+  top: -17.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(12)::before, .rubik .face:nth-child(3) .squares:nth-child(12)::after {
+  left: -57.5px;
+  top: -17.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(13)::before, .rubik .face:nth-child(3) .squares:nth-child(13)::after {
+  left: -17.5px;
+  top: -17.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(14)::before, .rubik .face:nth-child(3) .squares:nth-child(14)::after {
+  left: 22.5px;
+  top: -17.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(15)::before, .rubik .face:nth-child(3) .squares:nth-child(15)::after {
+  left: 62.5px;
+  top: -17.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(16)::before, .rubik .face:nth-child(3) .squares:nth-child(16)::after {
+  left: -97.5px;
+  top: 22.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(17)::before, .rubik .face:nth-child(3) .squares:nth-child(17)::after {
+  left: -57.5px;
+  top: 22.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(18)::before, .rubik .face:nth-child(3) .squares:nth-child(18)::after {
+  left: -17.5px;
+  top: 22.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(19)::before, .rubik .face:nth-child(3) .squares:nth-child(19)::after {
+  left: 22.5px;
+  top: 22.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(20)::before, .rubik .face:nth-child(3) .squares:nth-child(20)::after {
+  left: 62.5px;
+  top: 22.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(21)::before, .rubik .face:nth-child(3) .squares:nth-child(21)::after {
+  left: -97.5px;
+  top: 62.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(22)::before, .rubik .face:nth-child(3) .squares:nth-child(22)::after {
+  left: -57.5px;
+  top: 62.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(23)::before, .rubik .face:nth-child(3) .squares:nth-child(23)::after {
+  left: -17.5px;
+  top: 62.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(24)::before, .rubik .face:nth-child(3) .squares:nth-child(24)::after {
+  left: 22.5px;
+  top: 62.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(25)::before, .rubik .face:nth-child(3) .squares:nth-child(25)::after {
+  left: 62.5px;
+  top: 62.5px;
+}
+.rubik .face:nth-child(3) .squares:nth-child(26)::before, .rubik .face:nth-child(3) .squares:nth-child(26)::after {
+  left: -97.5px;
+  top: 102.5px;
+}
+.rubik .face::before, .rubik .face::after {
+  width: 100%;
+  height: 100%;
+}
+
+.face {
+  position: absolute;
+  transform-style: preserve-3d;
+}
+.face:nth-child(1) {
+  transform: rotate3d(0, 0, 0, 0deg);
+}
+.face:nth-child(2) {
+  transform: rotate3d(0, 1, 0, 90deg);
+}
+.face:nth-child(3) {
+  transform: rotate3d(1, 0, 0, 90deg);
+}
+
+.squares {
+  transform-style: preserve-3d;
+  animation: 6s ease-in-out infinite;
+}
+.squares, .squares::before, .squares::after {
+  position: absolute;
+}
+.squares::before, .squares::after {
+  content: "";
+  border-radius: 2.5px;
+  animation: 6s ease-in-out infinite;
+  backface-visibility: hidden;
+}
+.squares::before {
+  transform: translate3d(0, 0, 100px);
+}
+.squares::after {
+  transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 100px);
+}
+
+.face:nth-child(1) .squares:nth-of-type(5n + 1), .face:nth-child(3) .squares:nth-of-type(5n + 1) {
+  animation-name: rotationAnimationX;
+}
+.face:nth-child(1) .squares:nth-of-type(5n + 2), .face:nth-child(3) .squares:nth-of-type(5n + 2) {
+  animation-name: rotationAnimation-X;
+}
+.face:nth-child(1) .squares:nth-of-type(5n + 3), .face:nth-child(3) .squares:nth-of-type(5n + 3) {
+  animation-name: rotationAnimationX;
+}
+.face:nth-child(1) .squares:nth-of-type(5n + 4), .face:nth-child(3) .squares:nth-of-type(5n + 4) {
+  animation-name: rotationAnimation-X;
+}
+.face:nth-child(1) .squares:nth-of-type(5n + 5), .face:nth-child(3) .squares:nth-of-type(5n + 5) {
+  animation-name: rotationAnimationX;
+}
+.face:nth-child(2) .squares {
+  animation-name: rotationAnimationZ;
+}
+
+@keyframes rotateXYZ {
+  to {
+    transform: rotate3d(1, 1, 1, 360deg);
+  }
+}
+@keyframes rotationAnimationX {
+  0% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+  12.5% {
+    transform: rotate3d(1, 0, 0, 45deg);
+  }
+  25% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+  37.5% {
+    transform: rotate3d(1, 0, 0, 135deg);
+  }
+  50% {
+    transform: rotate3d(1, 0, 0, 180deg);
+  }
+  62.5% {
+    transform: rotate3d(1, 0, 0, 225deg);
+  }
+  75% {
+    transform: rotate3d(1, 0, 0, 270deg);
+  }
+  87.5% {
+    transform: rotate3d(1, 0, 0, 315deg);
+  }
+  100% {
+    transform: rotate3d(1, 0, 0, 360deg);
+  }
+}
+@keyframes rotationAnimation-X {
+  0% {
+    transform: rotate3d(-1, 0, 0, 0deg);
+  }
+  12.5% {
+    transform: rotate3d(-1, 0, 0, 45deg);
+  }
+  25% {
+    transform: rotate3d(-1, 0, 0, 90deg);
+  }
+  37.5% {
+    transform: rotate3d(-1, 0, 0, 135deg);
+  }
+  50% {
+    transform: rotate3d(-1, 0, 0, 180deg);
+  }
+  62.5% {
+    transform: rotate3d(-1, 0, 0, 225deg);
+  }
+  75% {
+    transform: rotate3d(-1, 0, 0, 270deg);
+  }
+  87.5% {
+    transform: rotate3d(-1, 0, 0, 315deg);
+  }
+  100% {
+    transform: rotate3d(-1, 0, 0, 360deg);
+  }
+}
+@keyframes rotationAnimationY {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+  12.5% {
+    transform: rotate3d(0, 1, 0, 45deg);
+  }
+  25% {
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+  37.5% {
+    transform: rotate3d(0, 1, 0, 135deg);
+  }
+  50% {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+  62.5% {
+    transform: rotate3d(0, 1, 0, 225deg);
+  }
+  75% {
+    transform: rotate3d(0, 1, 0, 270deg);
+  }
+  87.5% {
+    transform: rotate3d(0, 1, 0, 315deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+@keyframes rotationAnimation-Y {
+  0% {
+    transform: rotate3d(0, -1, 0, 0deg);
+  }
+  12.5% {
+    transform: rotate3d(0, -1, 0, 45deg);
+  }
+  25% {
+    transform: rotate3d(0, -1, 0, 90deg);
+  }
+  37.5% {
+    transform: rotate3d(0, -1, 0, 135deg);
+  }
+  50% {
+    transform: rotate3d(0, -1, 0, 180deg);
+  }
+  62.5% {
+    transform: rotate3d(0, -1, 0, 225deg);
+  }
+  75% {
+    transform: rotate3d(0, -1, 0, 270deg);
+  }
+  87.5% {
+    transform: rotate3d(0, -1, 0, 315deg);
+  }
+  100% {
+    transform: rotate3d(0, -1, 0, 360deg);
+  }
+}
+@keyframes rotationAnimationZ {
+  0% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  12.5% {
+    transform: rotate3d(0, 0, 1, 45deg);
+  }
+  25% {
+    transform: rotate3d(0, 0, 1, 90deg);
+  }
+  37.5% {
+    transform: rotate3d(0, 0, 1, 135deg);
+  }
+  50% {
+    transform: rotate3d(0, 0, 1, 180deg);
+  }
+  62.5% {
+    transform: rotate3d(0, 0, 1, 225deg);
+  }
+  75% {
+    transform: rotate3d(0, 0, 1, 270deg);
+  }
+  87.5% {
+    transform: rotate3d(0, 0, 1, 315deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
